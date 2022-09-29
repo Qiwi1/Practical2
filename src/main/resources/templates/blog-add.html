@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Добавление нового телефона</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form th:action="${'/blog/add'}" method="post">
+  <input type="text" name="modelsTel" placeholder="Введите модель телефона">
+  <input type="text" name="number" placeholder="Введите номер телефона">
+  <input type="text" name="memory" placeholder="Введите кол-во памяти">
+  <input type="text" name="memoryGB" placeholder="Введите кол-во оперативной памяти">
+  <input type="text" name="operator" placeholder="Введите имя оператора">
+  <br>
+  <button type="submit">Добавить телефон</button>
+</form>
+</body>
+</html>

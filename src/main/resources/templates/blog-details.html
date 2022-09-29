@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Getting Started: Serving Web Content</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+  <div th:each="el : ${post}">
+    <h3>Подробнее про телефон: </h3> <h3 th:text="${el.modelsTel}"></h3>
+    <p th:text="${el.number}"></p>
+    <p th:text="${el.operator}"></p>
+    <p th:text="${el.memory}"></p>
+    <p th:text="${el.memoryGB}"></p>
+    <form th:action="'/blog/' + ${el.id} + '/remove'" method="post">
+      <button type="submit" class="btn btn-del">Удалить</button>
+    </form>
+  </div>
+</body>
+</html>
